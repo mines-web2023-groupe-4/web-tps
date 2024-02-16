@@ -1,116 +1,99 @@
-# Le TP Hello Web
+# TP Hello Web
 
-## Setup Node
+## Configuration de Node.js
 
-Pour executer du code javascript nous avons besoin d'un environnement d'execution. Node.js est un des environnement d'execution de code javascript.
+Pour exécuter du code JavaScript, un environnement d'exécution est nécessaire. Node.js est l'un des environnements d'exécution les plus populaires pour le JavaScript.
 
-### Installer Node.js
+### Installation de Node.js
 
-Installer la version 20 (LTS = long term support)
+Installez la version 20 (LTS - Long Term Support) de Node.js.
 
-**version simple**
+**Installation simplifiée**
 
-Voir documentation en ligne : https://nodejs.org/en/download/ et suivre les instructions
+Consultez la documentation en ligne sur https://nodejs.org/en/download/ et suivez les instructions d'installation.
 
-**version avancée, mac/windows wsl**
+**Installation avancée pour Mac/Windows avec WSL**
 
-https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating
+Consultez https://github.com/nvm-sh/nvm#install--update-script pour obtenir des instructions sur l'utilisation de NVM (Node Version Manager) pour installer Node.js.
 
+### Vérification de l'installation de Node.js
 
-### Vérifier que Node.js est bien installé
+Ouvrez un terminal et saisissez la commande `node -v` pour vérifier que Node.js est correctement installé.
 
-Ouvrir un terminal et taper la commande `node -v` pour vérifier que Node.js est bien installé.
-
-Créer un fichier `hello.js` avec le code suivant :
+Créez un fichier nommé `hello.js` contenant le code suivant :
 
 ```javascript
-console.log("Hello les mines")
+console.log("Hello les mines");
 ```
 
-Exécuter le fichier avec la commande `node hello.js` et s'assurer qu'on voit bien le text "Hello les mines", pour vérifier que Node.js est bien installé.
+Exécutez ce fichier avec la commande `node hello.js`. Assurez-vous que le message "Hello les mines" s'affiche, confirmant ainsi que Node.js est correctement installé.
 
-## Créer un projet avec SolidJS
+## Création d'un projet avec SolidJS
 
-Pour créer un projet avec SolidJS, nous allons utiliser le gestionnaire de paquet `npm` qui est installé avec Node.js.
+Pour créer un projet utilisant SolidJS, nous utiliserons `npm`, le gestionnaire de paquets fourni avec Node.js.
 
-### Créer un projet
+### Initialisation du projet
 
-Placer vous dans le dossier ou vous voulez créer votre projet et taper la commande suivante :
+Dans le répertoire de votre choix, exécutez la commande suivante pour créer votre projet :
 
 ```bash
 npx degit solidjs/templates/js-tailwindcss tp-hello
 ```
 
-Ceci a alors créé un dossier `tp-hello` avec un projet SolidJS.
+Cette commande crée un dossier `tp-hello` contenant un squelette de projet SolidJS.
 
-On peut alors ouvrir le dossier
+Pour ouvrir ce dossier :
 
-Avec shell :
+- Utilisez la commande `cd tp-hello` dans le terminal,
+- Puis ouvrez-le avec VSCode en utilisant `code .` (Si cela ne fonctionne pas, ouvrez manuellement VSCode et naviguez jusqu'au dossier `tp-hello`).
 
-```bash
-cd tp-hello
-```
+### Installation des dépendances
 
-Puis avec VSCode (si cela ne marche pas chez vous vous pouvez ouvrir VSCode et ouvrir le dossier `tp-hello`):
-
-```bash
-code .
-```
-
-### On install les dépendances
-
-Pour installer les dépendances du projet, taper la commande suivante :
+Installez les dépendances du projet avec :
 
 ```bash
 npm install
 ```
 
-On peut alors lancer le projet avec la commande suivante :
+Lancez le projet avec :
 
 ```bash
 npm run dev
 ```
 
-Le projet est alors accessible à l'adresse `http://localhost:3000` (normalement)
-On peut alors ouvrir un navigateur à cette adresse pour voir le projet.
+Le projet sera accessible à l'adresse `http://localhost:3000`. Ouvrez cette adresse dans votre navigateur pour voir le projet.
 
-### Modifier le projet
+### Modification du projet
 
-Ouvrir le fichier `src/App.js` et modifier le texte `Hello World` par `Hello les mines` (ou autre chose de plus original).
+Ouvrez le fichier `src/App.js` et remplacez le texte `Hello World` par `Hello les mines` (ou tout autre message de votre choix).
 
-Le navigateur devrait alors se mettre à jour automatiquement pour afficher le nouveau texte.
+Votre navigateur devrait se rafraîchir automatiquement et afficher le nouveau message.
 
-![Magic](https://i.gifer.com/2Gb.gif)
+### Utilisation de Git et GitHub
 
-### Git & github
+Créez un dépôt sur GitHub et téléversez-y votre projet.
 
-On crée un repository sur github et on push le projet dessus.
-
-1. https://github.com/new pour créer un nouveau repository public sans template.
-2. On peut le nommer par exemple `hello-solid`
-3. Ensuite, dans le projet `tp-hello` on fait les commandes suivantes :
+1. Allez sur https://github.com/new pour créer un nouveau dépôt public sans utiliser de template.
+2. Nommez-le, par exemple, `hello-solid`.
+3. Dans le répertoire du projet `tp-hello`, exécutez les commandes suivantes :
 
 ```bash
 git init
 git add .
 git commit -m "Initial commit"
-
-# rempalcer <username> par votre nom d'utilisateur github
 git remote add origin git@github.com:<username>/hello-solid.git
 git push -u origin main
 ```
 
-On vérifie que le projet est bien sur github.
+Remplacez `<username>` par votre nom d'utilisateur GitHub. Vérifiez ensuite que le projet a bien été poussé sur GitHub.
 
-## Il est temps de publier sur le web
+## Publication sur le Web avec Vercel
 
-On utilisera pour cela le service Vercel.
+Utilisez le service Vercel pour publier votre projet en ligne.
 
-Créer un compte sur vercel.com en utilisant votre compte github.
+Créez un compte sur https://vercel.com en utilisant vos identifiants GitHub, puis suivez les instructions pour déployer votre projet.
 
-Suivre les instructions pour publier le projet sur vercel.
+### Pour continuer
 
-Suite
-
-* Partager le lien du projet publié sur vercel sur slack !
-* Changer le texte du projet pour quelque chose de plus original / commit / push / vérifier que le projet est bien mis à jour sur vercel.
+- Partagez le lien de votre projet Vercel sur Slack.
+- Modifiez le texte du projet pour le rendre plus original, puis faites un commit et poussez les modifications sur GitHub. Vérifiez que le projet se met à jour automatiquement sur Vercel.
