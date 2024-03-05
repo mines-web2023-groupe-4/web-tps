@@ -34,7 +34,7 @@ Cette commande crée un dossier `tp-taquin` contenant un squelette de projet Sol
 
 Pour ouvrir ce dossier :
 
-- Utilisez la commande `cd tp-hello` dans le terminal,
+- Utilisez la commande `cd tp-taquin` dans le terminal,
 - Puis ouvrez-le avec VSCode en utilisant `code .` (Si cela ne fonctionne pas, ouvrez manuellement VSCode et naviguez jusqu'au dossier `tp-taquin`).
 
 ### Installation des dépendances
@@ -69,7 +69,7 @@ On vérifie que tailwind fonctionne.
 Créez un dépôt sur GitHub et téléversez-y votre projet.
 
 1. Allez sur https://github.com/new pour créer un nouveau dépôt public sans utiliser de template.
-2. Nommez-le, par exemple, `hello-solid`.
+2. Nommez-le, par exemple, `tp-taquin`.
 3. Dans le répertoire du projet `tp-taquin`, exécutez les commandes suivantes :
 
 ```bash
